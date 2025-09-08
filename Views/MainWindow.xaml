@@ -1,0 +1,47 @@
+﻿<Window x:Class="CustomerApp.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Reolmarked Team 6" Height="500" Width="500">
+    <Grid Margin="10">
+        <TabControl>
+            <!-- Customers Tab -->
+            <TabItem Header="Customers">
+                <StackPanel Margin="10">
+                    <TextBlock x:Name="TxtStatusCustomers" FontWeight="Bold"/>
+                    <ListBox x:Name="LstCustomers" Height="150"/>
+                    <Button Content="Update Customers" Click="BtnUpdateCustomers_Click"/>
+                    <TextBox x:Name="TxtName" Text="Name" GotFocus="TxtBox_GotFocus" LostFocus="TxtBox_LostFocus"/>
+                    <TextBox x:Name="TxtEmail" Text="Email" GotFocus="TxtBox_GotFocus" LostFocus="TxtBox_LostFocus"/>
+                    <TextBox x:Name="TxtPhone" Text="Phone" GotFocus="TxtBox_GotFocus" LostFocus="TxtBox_LostFocus"/>
+                    <Button Content="Add Customer" Click="BtnAddCustomer_Click"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Shelves Tab -->
+            <TabItem Header="Shelves">
+                <StackPanel Margin="10">
+                    <TextBlock x:Name="TxtStatusShelves" FontWeight="Bold"/>
+                    <ListBox x:Name="LstShelves" Height="150"/>
+                    <Button Content="Update Shelves" Click="BtnUpdateShelves_Click"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:Name="TxtShelfId" Width="80" Text="ShelfId" GotFocus="TxtBox_GotFocus" LostFocus="TxtBox_LostFocus"/>
+                        <TextBox x:Name="TxtCustomerId" Width="80" Text="CustomerId" GotFocus="TxtBox_GotFocus" LostFocus="TxtBox_LostFocus"/>
+                        <Button Content="Rent Shelf" Click="BtnRentShelf_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Sales Tab -->
+            <TabItem Header="Sales">
+                <StackPanel Margin="10">
+                    <TextBlock x:Name="TxtStatusSale" FontWeight="Bold"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:Name="TxtShelfIdSale" Width="80" Text="ShelfId" GotFocus="TxtBox_GotFocus" LostFocus="TxtBox_LostFocus"/>
+                        <TextBox x:Name="TxtSaleAmount" Width="100" Text="Amount" GotFocus="TxtBox_GotFocus" LostFocus="TxtBox_LostFocus"/>
+                        <Button Content="Register Sale" Click="BtnRegisterSale_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
